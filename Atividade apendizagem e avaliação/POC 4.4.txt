@@ -1,0 +1,25 @@
+POC 4.4
+O principal objetivo dessa POC é simular o funcionamento de um algoritmo de vetor de distâncias em uma rede
+de roteadores onde: nós(roteadores) podem ser adicionados ou removidos ao longo do processo, e as distâncias
+entre os nós são atualizadas automaticamente conforme as mudanças.
+1-Inicialização da rede
+Iniciamos com 4 roteadores(nós), cada um deles conhece a distância até os outros roteadores diretamente 
+conectados a eles. Se não houver conexão direta, a distância é considerada infinita.
+2-Adicionando um roteador
+Ao adicionar um novo roteador a rede é atualizada e a distância entre os roteadores precisa ser recalculada.
+A função addNote() faz isso, reajustando as distâncias necessárias.
+3-Removendo um roteador
+Ao remover um roteador a rede também precisa ser atualizada. A função removeNode() remove o roteador da matriz
+de distâncias e recalcula as novas distâncias.
+4-Algoritmo de vetor de distâncias
+Funciona atualizando continuamente as distâncias entre todos os roteadores, procurando sempre as rotas mais 
+curtas. Ele faz isso repetidamente até que as distâncias entre todos os pares de roteadores estejam corretas.
+5-Impressão das distâncias
+Após cada atualização as distâncias entre todos os roteadores são mostradas na tela, com INF representando uma
+conexão impossível ou distante.
+
+Resumo das funcionalidades da POC
+1-Inicia a rede com uma configuração simples de 4 roteadores;
+2-Adiciona um novo roteador e atualiza as distâncias;
+3-Remove um roteador e recalcula as distâncias;
+4-Mostra as distâncias de cada roteador para os outros, incluindo INF para conexões que não são mais possíveis;

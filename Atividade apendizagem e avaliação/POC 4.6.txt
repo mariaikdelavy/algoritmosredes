@@ -1,0 +1,27 @@
+POC 4.6
+Nesse novo modelo de código é possível:
+1-Adicionar aresta
+Permite conectar dois nós existentes com um peso específico.
+Atualiza a matriz de adjacência para refletir o novo peso entre os nós conectados.
+2-Remover arestas
+Remove a conexão entre dois nós, substituindo o peso pela representação de infinito.
+3-Adicionar nó
+Incrementa o número de nós na rede.
+Todas as conexões do novo nó são incializadas como inexistentes(peso infinito).
+4-Remover nó
+Desconecta o nó especificado de todos os outros, removendo todas as suas arestas.
+
+Funcionamneto do Cálculo do Dijkstra
+1-O usuário seleciona um nó de origem para executar o algoritmo.
+2-O programa calcula as menores distâncias do nó de origem para todos os outros nós na rede.
+3-O algoritmo considera todas as alterações feitas na rede(como adição ou remoção de nós e arestas).
+4-O resultado é exibido em uma tabela de roteamento: 
+    Distância: menor custo até cada nó de destino.
+    Caminho: nó anterior no caminho mais curto.
+
+Benefícios da POC
+1-Adaptação dinâmica: mostra como o algoritmo de Dijkstra recalcula rotas após mudanças na topologia.
+2-Simulação realista: representa cenários reais em redes de computadores, onde roteadores podem ser adicionados,
+removidos ou desconectados.
+3-Flexibilidade: o sistema permite testar diferentes cenários de topologia, ajudando a validar o comportamento
+do algoritmo em situações práticas.

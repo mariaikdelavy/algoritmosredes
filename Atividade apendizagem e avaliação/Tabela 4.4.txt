@@ -1,0 +1,24 @@
+Tabela 4.4
+O algoritmo de roteamento por vetor de distâncias é utilizado em redes de comunicação para que cada nó (ou 
+computador) saiba as distâncias mais curtas para os outros nós na rede.
+No início do programa são feitas as declarações de variáveis onde N é o número de nós na rede, const[] é uma
+tabela que define os custos(ou distância) diretas entre os nós. Caso não haja conexão direta entre dois nós 
+o valor é INT_MAX(um valor muito grande, que significa "infinito", ou seja, não há caminho direto).
+Na estrutura para armazenar as distâncias cada nó tem um vetor de distâncias que as guarda para 
+todos os outros nós da rede. Isso é efetuado através da estrutura Node, que tem um vetor dist[].
+A inicialização das distâncias começa com o programa atribuindo os valores de distância(a distância de um nó 
+para ele mesmo é sempre 0 e a distância entre dois nós i e j é o valor que está na matriz cost[i][j]).
+A atualização das distâncias ocorre quando o programa simula a troca de informações entre os nós, onde cada nó 
+"envia" seu vetor de distância para os vizinhos, e cada nó atualiza seu vetor de distâncias com as melhores 
+opções. Ele verifica se existe um caminho mais curto através de outro nó e caso encontrar um caminho mais curto
+ele atualiza sua distância para o nó de destino. Isso é feito repetidamente até que nenhuma distância seja mais
+atualizada, ou seja, todos os nós já sabem as distâncias mínimas entre eles.
+No final o programa imprime a tabela final de distâncias entre todos os nós. Se não houver caminho direto entre
+dois nós, será mostrado "INF".
+
+Resumo do processo:
+1-Inicialização: o programa começa com as distâncias diretas entre os nós.
+2-Troca de informações: cada nó envia suas distâncias para os outros e atualiza seu vetor de distâncias se encontrar
+uma maneira mais curta.
+3-Repetição: o processo de troca de informações continua até que as distâncias não mudem mais.
+4-Resultado final: o programa mostra as distâncias mínimas entre todos os nós.

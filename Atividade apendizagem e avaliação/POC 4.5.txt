@@ -1,0 +1,12 @@
+POC 4.5
+Nesse novo código foram adicionadas novas funcionalidades, sendo elas:
+1-Adicionar nó(adicionarNo)
+Aumenta dinamicamente o tamanho da matriz de adjacência e inicializa as novas conexões como 0(nenhuma aresta conectada ao 
+novo nó).
+2-Remover nó(removerNo)
+Desconecta o nó especificado marcando todas as arestas como 0(inacessível).
+3-Menu interativo
+Nele o usuário pode escolher entre: executar o algoritmo de Dijkstra, adicionar um nó, remover um nó ou encerrar o programa.
+
+As vantagens dessa POC são que ela demonstra a capacidade do algoritmo de lidar com topologias de rede dinâmicas, simula cenários
+reais em redes, como adição e falha de roteadores e atualiza os menores caminhos automaticamente após mudanças no grafo.

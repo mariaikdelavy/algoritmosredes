@@ -1,0 +1,20 @@
+Tabela 4.5
+Esse programa implementa o algoritmo de Dijkstra, que encontra o menor caminho de um nó inicial(raíz) até os outros nós em um grafo ponderado.
+Na entrada de dados o programa solicita o número de nós(n) que representa o número de vértices do grafo, a matriz de adjacência onde o grafo é
+representado a partir de cada posição grafo[i][j] que contém o peso(custo) da aresta entre os nós i e j(se não possui aresta o vaor é 0), e o nó
+da raiz, a partir do qual será calculada as menores distâncias.
+Foram utilizados três vetores principais, sendo eles o dist[], que guarda a menor distância da raiz para cada nó(inicialmnete todas são definidas
+como infinito INT_MAX, exceto a distância da raíz para ela mesma que é 0), visitado[], que indica se o nó já foi processado, ou seja, inserido na 
+árvore de menor caminho(todos começam como não visitados 0), e o grafo[][], que representa o grafo como uma matriz de adjacência, é o mapa das 
+conexões e seu respectivos pesos.
+A execução do programa ocorre dessa forma:
+1-Inicialização:
+O vetor dist[] é configurado para que todas as distâncias sejam "infinito" (INT_MAX), exceto a raíz (distância 0).
+O vetor visitado[] marca todos os nós como "não processados" inicialmente.
+2-Laço principal:
+Em cada interação, o algoritmo encontra o nó com a menor distância ainda não visitado (denominado u).
+Marca u como visitado, pois agora faz parte do caminho mais curto.
+Para cada vizinho v de u, se verifica se é possível atualizar a distância até v através de u. A atualização acontece se o caminho através de u
+for menor do que o valor já armazenado em dist[v].
+3-Finalização:
+O algoritmo termina quando todos os nós forem visitados ou quando não houver mais nós acessíveis (distância infinita).

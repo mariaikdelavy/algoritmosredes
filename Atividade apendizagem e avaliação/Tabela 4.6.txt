@@ -1,0 +1,24 @@
+Tabela 4.6
+Esse algoritmo é utilizado para calcular os menores caminhos entre nós(roteadores) em uma topologia de rede, com base em
+informaçõe trocadas entre os nós vizinhos.
+A estrutura geral do programa é formada por:
+1-Entrada de dados
+O programa solicita ao usuário o número de nós na rede e a matriz de adjacência, que representa a topologia da rede.
+Nessa matriz, a posição 'garfo[i][j]' indica o custo do caminho direto entre os nós i e j. Um valor muito alto 
+(representado por INT_MAX) indica que não há conexão direta entre os dois nós.
+2-Inicialização
+Cada nó na rede tem uma tabela de roteamneto composta de: Distância(menor distância para cada nó) e Próximo nó(o
+próximo nó no caminho para alcançar o nó de destino).
+Inicialmente a distância para si mesmo é 0, a distância para outros nós é infinita(desconhecida), o próximo nó 
+para qualquer destino é indefinido, exceto para si mesmo.
+3-atualização das tabelas
+As tabelas de roteamento são atualizadas repetitivamente.
+Cada nó analisa as tabelas de roteamento de seus vizinhos e tenta melhorar sua própria tabela.
+Se o caminho para um destino i via um vizinho é mais curto, a tabela é atualizada com: a nova distância(custo até
+v + distância de v até i) e com o próximo nó sendo v.
+4-Finalização
+O processo continua até que nenhuma tabela de roteamento sofra alterações, indicando que o estado da rede estabilizou
+e as tabelas convergiam.
+5-Saída
+A cada interação o programa imprime as tabelas de roteamento de todos os nós.
+Ao final ele informa que as tabelas de roteamento convergiam.
